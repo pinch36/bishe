@@ -4,6 +4,7 @@ go 1.15
 
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.2
+	github.com/alibaba/open-local v0.2.4-0.20211118031547-952eadbb4a8e
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/pquerna/ffjson v0.0.0-20190930134022-aa0246cd15f7
 	github.com/sirupsen/logrus v1.8.1
@@ -11,7 +12,6 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.7.1
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
-	github.com/alibaba/open-local v0.2.4-0.20211118031547-952eadbb4a8e
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
 	golang.org/x/sys v0.0.0-20211025201205-69cdffdb9359 // indirect
 	helm.sh/helm/v3 v3.6.2

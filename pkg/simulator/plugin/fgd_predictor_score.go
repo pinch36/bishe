@@ -15,27 +15,27 @@ import (
 	"github.com/hkust-adsl/kubernetes-scheduler-simulator/pkg/utils"
 )
 
-type FGDScorePlugin struct {
+type FGDPredictorScorePlugin struct {
 	handle      framework.Handle
 	typicalPods *simontype.TargetPodList
 }
 
-var _ framework.ScorePlugin = &FGDScorePlugin{}
+var _ framework.ScorePlugin = &FGDPredictorScorePlugin{}
 
-func NewFGDScorePlugin(_ runtime.Object, handle framework.Handle, typicalPods *simontype.TargetPodList) (framework.Plugin, error) {
-	plugin := &FGDScorePlugin{
+func NewFGDPredictorScorePlugin(_ runtime.Object, handle framework.Handle, typicalPods *simontype.TargetPodList) (framework.Plugin, error) {
+	plugin := &FGDPredictorScorePlugin{
 		handle:      handle,
 		typicalPods: typicalPods,
 	}
-	allocateGpuIdFunc[plugin.Name()] = allocateGpuIdBasedOnFGDScore
+	allocateGpuIdFunc[plugin.Name()] = allocateGpuIdBasedOnFGDScoreWithPredict
 	return plugin, nil
 }
 
-func (plugin *FGDScorePlugin) Name() string {
-	return simontype.FGDScorePluginName
+func (plugin *FGDPredictorScorePlugin) Name() string {
+	return simontype.FGDPredictorScorePluginName
 }
 
-func (plugin *FGDScorePlugin) Score(ctx context.Context, state *framework.CycleState, p *v1.Pod, nodeName string) (int64, *framework.Status) {
+func (plugin *FGDPredictorScorePlugin) Score(ctx context.Context, state *framework.CycleState, p *v1.Pod, nodeName string) (int64, *framework.Status) {
 	if podReq, _ := resourcehelper.PodRequestsAndLimits(p); len(podReq) == 0 {
 		return framework.MaxNodeScore, framework.NewStatus(framework.Success)
 	}
@@ -51,15 +51,15 @@ func (plugin *FGDScorePlugin) Score(ctx context.Context, state *framework.CycleS
 		return framework.MinNodeScore, framework.NewStatus(framework.Error, fmt.Sprintf("Node (%s) %s does not match GPU type request of pod %s\n", nodeName, nodeRes.Repr(), podRes.Repr()))
 	}
 
-	score, _ := calculateGpuShareFragExtendScore(nodeRes, podRes, plugin.typicalPods)
+	score, _ := calculateGpuShareFragExtendScoreWithPredict(nodeRes, podRes, plugin.typicalPods)
 	return score, framework.NewStatus(framework.Success)
 }
 
-func (plugin *FGDScorePlugin) ScoreExtensions() framework.ScoreExtensions {
+func (plugin *FGDPredictorScorePlugin) ScoreExtensions() framework.ScoreExtensions {
 	return nil
 }
 
-func calculateGpuShareFragExtendScore(nodeRes simontype.NodeResource, podRes simontype.PodResource, typicalPods *simontype.TargetPodList) (score int64, gpuId string) {
+func calculateGpuShareFragExtendScoreWithPredict(nodeRes simontype.NodeResource, podRes simontype.PodResource, typicalPods *simontype.TargetPodList) (score int64, gpuId string) {
 	// 分数越高碎片化越严重
 	nodeGpuShareFragScore := utils.NodeGpuShareFragAmountScore(nodeRes, *typicalPods)
 	if podRes.GpuNumber == 1 && podRes.MilliGpu < gpushareutils.MILLI { // request partial GPU
@@ -86,7 +86,7 @@ func calculateGpuShareFragExtendScore(nodeRes simontype.NodeResource, podRes sim
 	}
 }
 
-func allocateGpuIdBasedOnFGDScore(nodeRes simontype.NodeResource, podRes simontype.PodResource, _ simontype.GpuPluginCfg, typicalPods *simontype.TargetPodList) (gpuId string) {
-	_, gpuId = calculateGpuShareFragExtendScore(nodeRes, podRes, typicalPods)
+func allocateGpuIdBasedOnFGDScoreWithPredict(nodeRes simontype.NodeResource, podRes simontype.PodResource, _ simontype.GpuPluginCfg, typicalPods *simontype.TargetPodList) (gpuId string) {
+	_, gpuId = calculateGpuShareFragExtendScoreWithPredict(nodeRes, podRes, typicalPods)
 	return gpuId
 }

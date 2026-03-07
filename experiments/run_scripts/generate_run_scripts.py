@@ -37,6 +37,7 @@ AllMethodList = [
     ["04", "GpuPacking", "<none>", "<none>", "<none>"],
     ["05", "BestFit", "<none>", "<none>", "<none>"],
     ["06", "FGD", "<self>", "share", "max"],
+    ["07", "FGDPredictor", "<self>", "share", "max"],
 ]
 
 AllMethodDict = {}
@@ -56,6 +57,7 @@ MethodList = [
     ["04", "GpuPacking", "<none>", "<none>", "<none>"],
     ["05", "BestFit", "<none>", "<none>", "<none>"],
     ["06", "FGD", "<self>", "share", "max"],
+    ["07", "FGDPredictor", "<self>", "share", "max"],
 ]
 
 def get_dir_name_from_method(method_input):

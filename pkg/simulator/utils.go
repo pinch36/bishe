@@ -254,6 +254,9 @@ func GetAndSetSchedulerConfig(schedulerConfig string) (*config.CompletedConfig, 
 			{
 				Name: simontype.FGDScorePluginName,
 			},
+			{
+				Name: simontype.FGDPredictorScorePluginName,
+			},
 		},
 	}
 	kcfg.Profiles[0].Plugins.Filter = &kubeschedulerconfig.PluginSet{

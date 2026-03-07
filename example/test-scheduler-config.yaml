@@ -15,6 +15,7 @@ profiles:
           - name: GpuPackingScore
           - name: BestFitScore
           - name: FGDScore
+          - name: FGDPredictorScore
           - name: ImageLocality
           - name: NodeAffinity
           - name: PodTopologySpread

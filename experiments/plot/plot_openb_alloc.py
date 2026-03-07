@@ -63,8 +63,8 @@ for type, file in FILEDICT.items():
 
 # openb, production workloads:
 
-policy_keep = ['Random', 'DotProd', 'Clustering', 'Packing', 'BestFit', 'FGD']
-policy_keepr = ['FGD', 'BestFit', 'Packing', 'Clustering', 'DotProd', 'Random']
+policy_keep = ['Random', 'DotProd', 'Clustering', 'Packing', 'BestFit', 'FGD','FGDPredictor']
+policy_keepr = ['FGD','FGDPredictor', 'BestFit', 'Packing', 'Clustering', 'DotProd', 'Random']
 
 TYPE=list(FILEDICT.keys())[0]
 # ['alloc', 'frag_amount', 'frag_ratio']
