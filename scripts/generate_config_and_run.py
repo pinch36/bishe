@@ -26,11 +26,13 @@ SCORE_POLICY_ABBR = {
     "GpuPackingScore":    "GpuPacking",
     "BestFitScore":       "BestFit",
     "FGDScore":           "FGD",
+    "FGDPredictorScore":  "FGDPredictor",
 }
 
 SCORE_PLUGINS_WITH_DIM_NORM_GPU_METHOD = [
     "DotProductScore", # dot product
     "FGDScore",        # FGD
+    "FGDPredictorScore",
 ]
 SCORE_PLUGINS_WITH_PRE_FILTER = [
 ]
@@ -209,6 +211,7 @@ profiles:
           - name: GpuPackingScore
           - name: BestFitScore
           - name: FGDScore
+          - name: FGDPredictorScore
           # 
           - name: ImageLocality
           - name: NodeAffinity
