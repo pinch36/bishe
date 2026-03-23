@@ -70,7 +70,7 @@ dfnp = dfp_dict[TYPE]
 
 colors = sns.color_palette()
 colors.reverse()
-colors = colors[-6:]
+colors = colors[-7:]
 
 if TYPE=='frag_amount':
     dfnpp = dfnp[dfnp.workload==workload].copy()

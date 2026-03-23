@@ -1,0 +1,31 @@
+
+===
+log-cc_owgpushare100_dr0.0_tn1.3_ts42_if1.0_md3956.yaml-sc_Random1000_deshare_gsrandom_md8fc0.yaml.log
+2115; <CPU:   3.15, GPU: 1 x {810 }m ()>
+665; <CPU:   8.00, GPU: 1 x {470 }m ()>
+662; <CPU:  11.91, GPU: 1 x {470 }m ()>
+418; <CPU:  11.91, GPU: 1 x {650 }m ()>
+310; <CPU:   4.00, GPU: 1 x {320 }m ()>
+219; <CPU:   6.00, GPU: 1 x {460 }m ()>
+137; <CPU:   3.15, GPU: 1 x {590 }m ()>
+113; <CPU:   4.00, GPU: 1 x {230 }m ()>
+111; <CPU:   4.15, GPU: 1 x {550 }m ()>
+107; <CPU:   8.00, GPU: 1 x {320 }m ()>
+58; <CPU:   4.15, GPU: 1 x {370 }m ()>
+46; <CPU:   4.15, GPU: 1 x {810 }m ()>
+30; <CPU:   8.00, GPU: 1 x {650 }m ()>
+28; <CPU:   4.00, GPU: 1 x {220 }m ()>
+25; <CPU:   4.00, GPU: 1 x {480 }m ()>
+19; <CPU:   8.00, GPU: 1 x {230 }m ()>
+15; <CPU:   4.00, GPU: 1 x {350 }m ()>
+14; <CPU:  12.00, GPU: 1 x {460 }m ()>
+ 9; <CPU:   8.00, GPU: 1 x {220 }m ()>
+ 8; <CPU:   4.00, GPU: 1 x {330 }m ()>
+ 7; <CPU:   4.00, GPU: 1 x {470 }m ()>
+ 3; <CPU:   8.00, GPU: 1 x {460 }m ()>
+ 3; <CPU:   4.15, GPU: 1 x {270 }m ()>
+ 2; <CPU:   4.00, GPU: 1 x {650 }m ()>
+ 1; <CPU:   8.00, GPU: 1 x {480 }m ()>
+ 1; <CPU:   6.00, GPU: 1 x {320 }m ()>
+ 1; <CPU:   8.00, GPU: 1 x {440 }m ()>
+Failed No.: 5127

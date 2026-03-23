@@ -1,0 +1,20 @@
+
+===
+# log-cc_owcpu200_dr0.0_tn1.3_ts42_if1.0_mde093.yaml-sc_BestFit1000_deshare_gsbest_md7031.yaml.log:
+time="2026-03-09T02:41:08+08:00" level=info msg="========== Cluster Analysis Results (InitSchedule) =========="
+time="2026-03-09T02:41:08+08:00" level=info msg="Allocation Ratio:\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="    MilliCpuLeft: 97.1% (103878684/107018000)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="    Memory  : 69.7% (368212042579968/528302452244480)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="    Gpu     : 98.1% (6097/6212)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="    MilliGpu: 92.6% (5753380/6212000)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="q1_lack_both : 222.56 x 10^3 (48.53%)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="q2_lack_gpu  :  22.15 x 10^3 ( 4.83%)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="q3_satisfied :   2.91 x 10^3 ( 0.64%)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="q4_lack_cpu  : 116.98 x 10^3 (25.51%)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="xl_satisfied :   0.81 x 10^3 ( 0.18%)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="xr_lack_cpu  :  93.20 x 10^3 (20.32%)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="no_access    :   0.00 x 10^3 ( 0.00%)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg=--------------------
+time="2026-03-09T02:41:08+08:00" level=info msg="idle_gpu_milli: 458.62 x 10^3 (100.0%)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="frag_gpu_milli: 455.71 x 10^3 (99.36%)\n"
+time="2026-03-09T02:41:08+08:00" level=info msg="=============================================="

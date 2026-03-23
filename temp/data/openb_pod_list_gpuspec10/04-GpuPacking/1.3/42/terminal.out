@@ -1,0 +1,10 @@
+ExpDir: experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42
+    cc: experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42/cc_owgpuspec10_dr0.0_tn1.3_ts42_if1.0_md7e61.yaml
+    sc: experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42/sc_GpuPacking1000_deshare_gsbest_md3326.yaml
+    Ex: ./bin/simon apply --extended-resources "gpu" -f experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42/cc_owgpuspec10_dr0.0_tn1.3_ts42_if1.0_md7e61.yaml --default-scheduler-config experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42/sc_GpuPacking1000_deshare_gsbest_md3326.yaml
+    >>: experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42/log-cc_owgpuspec10_dr0.0_tn1.3_ts42_if1.0_md7e61.yaml-sc_GpuPacking1000_deshare_gsbest_md3326.yaml.log 
+
+Failed pods: /Users/raoliwen/IdeaProjects/my-projects/kubernetes-scheduler-simulator/experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42/analysis_fail.out
+Log grep: /Users/raoliwen/IdeaProjects/my-projects/kubernetes-scheduler-simulator/experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42/analysis_grep.out
+In:  /Users/raoliwen/IdeaProjects/my-projects/kubernetes-scheduler-simulator/experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42 
+Out: /Users/raoliwen/IdeaProjects/my-projects/kubernetes-scheduler-simulator/experiments/2023_0511/openb_pod_list_gpuspec10/04-GpuPacking/1.3/42/analysis.csv

@@ -157,7 +157,9 @@ func NodeGpuShareFragAmount(nodeRes simontype.NodeResource, typicalPods simontyp
 		gpuMilliLeftTotal := GetGpuMilliLeftTotal(nodeRes)
 		if fragType == Q3Satisfied { // Part of GPUs are treated as Lack GPU fragment
 			gpuFragMilli := GetGpuFragMilliByNodeResAndPodRes(nodeRes, pod.TargetPodResource)
+			// GPU无法分配的为碎片
 			fragAmount.AddByFragType(Q2LackGpu, freq*float64(gpuFragMilli))
+			// 可分配的GPU
 			fragAmount.AddByFragType(Q3Satisfied, freq*float64(gpuMilliLeftTotal-gpuFragMilli))
 		} else { // Q1, Q2, XL, XR, NA => all idle GPU resources are treated as fragment
 			fragAmount.AddByFragType(fragType, freq*float64(gpuMilliLeftTotal))
@@ -554,6 +556,7 @@ func CanNodeHostPodOnGpuMemory(nodeRes simontype.NodeResource, podRes simontype.
 }
 
 func GetNodePodFrag(nodeRes simontype.NodeResource, podRes simontype.PodResource) string {
+	// 纯CPU
 	if podRes.MilliGpu == 0 {
 		if nodeRes.MilliCpuLeft >= podRes.MilliCpu {
 			return XLSatisfied
@@ -561,18 +564,21 @@ func GetNodePodFrag(nodeRes simontype.NodeResource, podRes simontype.PodResource
 			return XRLackCPU
 		}
 	}
-
+	// GPU类型不匹配
 	if IsNodeAccessibleToPod(nodeRes, podRes) == false {
 		return NoAccess
 	}
-
+	// GPU数量是否够
 	if CanNodeHostPodOnGpuMemory(nodeRes, podRes) {
+		// CPU也够
 		if nodeRes.MilliCpuLeft >= podRes.MilliCpu {
 			return Q3Satisfied
 		} else {
+			// CPU不够
 			return Q4LackCpu
 		}
 	} else {
+		// CPU够GPU不够
 		if nodeRes.MilliCpuLeft >= podRes.MilliCpu {
 			return Q2LackGpu
 		} else {

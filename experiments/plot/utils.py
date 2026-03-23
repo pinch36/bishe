@@ -18,6 +18,7 @@ POLICY_ABBR_DICT = {
     '04-GpuPacking':    'Packing',
     '05-BestFit':       'BestFit',
     '06-FGD':           'FGD',
+    '07-FGDPredictor':  'FGDPredictor',
 }
 
 def move_tag_to_new_column(df, tag_list=TAG_SNAKE_LIST):
