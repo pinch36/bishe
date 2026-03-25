@@ -313,9 +313,15 @@ func (sim *Simulator) assumePod(pod *corev1.Pod) *simontype.UnscheduledPod {
 }
 
 func (sim *Simulator) SchedulePods(pods []*corev1.Pod) []simontype.UnscheduledPod {
+	log.Infof("[SchedulePods] pod size(%d)\n", len(pods))
 	var failedPods []simontype.UnscheduledPod
 	sim.arrPodGpuMilli = 0
+	start := 0
 	for i, pod := range pods {
+		if i > start*1000 {
+			sim.SetTypicalPodsByFutureCreatingPods(pods, i, 1000)
+			start++
+		}
 		if IsPodMarkedUnscheduledAnno(pod) {
 			log.Infof("[%d] pod(%s) has unscheduled annotation\n", i, utils.GeneratePodKey(pod))
 			failedPods = append(failedPods, simontype.UnscheduledPod{
@@ -324,7 +330,6 @@ func (sim *Simulator) SchedulePods(pods []*corev1.Pod) []simontype.UnscheduledPo
 			})
 			continue
 		}
-
 		deletionTime := gpushareutils.GetDeletionTimeFromPodAnnotation(pod)
 		if deletionTime == nil {
 			podRes := utils.GetPodResource(pod)
@@ -1139,4 +1144,26 @@ func (sim *Simulator) tuneUpPods(pods []*corev1.Pod, cfg v1alpha1.WorkloadTuning
 		}
 	}
 	return pods
+}
+
+func (sim *Simulator) SetTypicalPodsByFutureCreatingPods(allPods []*corev1.Pod, currentIdx int, windowSize int) {
+	if windowSize <= 0 {
+		windowSize = 100
+	}
+
+	windowPods := make([]*corev1.Pod, 0, windowSize)
+	for j := currentIdx + 1; j < len(allPods) && len(windowPods) < windowSize; j++ {
+		if gpushareutils.GetDeletionTimeFromPodAnnotation(allPods[j]) == nil {
+			windowPods = append(windowPods, allPods[j])
+		}
+	}
+
+	if len(windowPods) == 0 {
+		sim.typicalPods = simontype.TargetPodList{}
+		sim.fragMemo = sync.Map{}
+		return
+	}
+
+	sim.typicalPods = utils.GetTypicalPods(windowPods, sim.customConfig.TypicalPodsConfig)
+	sim.fragMemo = sync.Map{}
 }
