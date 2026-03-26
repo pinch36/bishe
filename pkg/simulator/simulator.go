@@ -318,8 +318,8 @@ func (sim *Simulator) SchedulePods(pods []*corev1.Pod) []simontype.UnscheduledPo
 	sim.arrPodGpuMilli = 0
 	start := 0
 	for i, pod := range pods {
-		if i > start*1000 {
-			sim.SetTypicalPodsByFutureCreatingPods(pods, i, 1000)
+		if i > start*300 {
+			sim.SetTypicalPodsByFutureCreatingPods(pods, i, 300)
 			start++
 		}
 		if IsPodMarkedUnscheduledAnno(pod) {

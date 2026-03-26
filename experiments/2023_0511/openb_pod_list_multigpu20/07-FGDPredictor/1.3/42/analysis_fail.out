@@ -1,30 +1,30 @@
 
 ===
 log-cc_owmultigpu20_dr0.0_tn1.3_ts42_if1.0_mda23e.yaml-sc_FGDPredictor1000_deshare_gsFGDPredictorScore_md6126.yaml.log
-319; <CPU:   3.15, GPU: 1 x {810 }m ()>
-257; <CPU:  11.30, GPU: 1 x {1000}m ()>
-176; <CPU:  11.40, GPU: 1 x {1000}m ()>
-123; <CPU:   3.15, GPU: 1 x {1000}m ()>
-103; <CPU:  12.00, GPU: 1 x {1000}m ()>
-102; <CPU:  11.91, GPU: 1 x {470 }m ()>
-101; <CPU:   8.00, GPU: 1 x {470 }m ()>
-88; <CPU:  11.91, GPU: 1 x {650 }m ()>
-77; <CPU:  18.71, GPU: 1 x {1000}m ()>
-72; <CPU:   4.00, GPU: 1 x {320 }m ()>
+317; <CPU:   3.15, GPU: 1 x {810 }m ()>
+255; <CPU:  11.30, GPU: 1 x {1000}m ()>
+173; <CPU:  11.40, GPU: 1 x {1000}m ()>
+121; <CPU:   3.15, GPU: 1 x {1000}m ()>
+102; <CPU:  12.00, GPU: 1 x {1000}m ()>
+101; <CPU:  11.91, GPU: 1 x {470 }m ()>
+99; <CPU:   8.00, GPU: 1 x {470 }m ()>
+87; <CPU:  11.91, GPU: 1 x {650 }m ()>
+76; <CPU:  18.71, GPU: 1 x {1000}m ()>
+71; <CPU:   4.00, GPU: 1 x {320 }m ()>
 52; <CPU:   9.81, GPU: 1 x {1000}m ()>
 45; <CPU:  15.70, GPU: 1 x {1000}m ()>
 45; <CPU:   8.00, GPU: 1 x {1000}m ()>
 44; <CPU:   4.00, GPU: 1 x {1000}m ()>
-43; <CPU:  16.00, GPU: 1 x {1000}m ()>
+42; <CPU:  16.00, GPU: 1 x {1000}m ()>
 34; <CPU:  11.91, GPU: 1 x {1000}m ()>
-33; <CPU:   4.00, GPU: 1 x {230 }m ()>
-29; <CPU:  24.20, GPU: 1 x {1000}m ()>
+31; <CPU:   4.00, GPU: 1 x {230 }m ()>
 28; <CPU:   6.00, GPU: 1 x {460 }m ()>
+27; <CPU:  24.20, GPU: 1 x {1000}m ()>
 27; <CPU:  14.20, GPU: 1 x {1000}m ()>
 25; <CPU:  64.20, GPU: 8 x {1000}m ()>
 23; <CPU:   3.15, GPU: 1 x {590 }m ()>
-21; <CPU:  88.00, GPU: 8 x {1000}m ()>
 20; <CPU:   4.15, GPU: 1 x {550 }m ()>
+20; <CPU:  88.00, GPU: 8 x {1000}m ()>
 18; <CPU:   8.00, GPU: 1 x {320 }m ()>
 17; <CPU:   4.15, GPU: 1 x {370 }m ()>
 16; <CPU:   4.00, GPU: 1 x {220 }m ()>
@@ -36,23 +36,23 @@ log-cc_owmultigpu20_dr0.0_tn1.3_ts42_if1.0_mda23e.yaml-sc_FGDPredictor1000_desha
  9; <CPU:  15.20, GPU: 1 x {1000}m ()>
  9; <CPU:   4.00, GPU: 1 x {480 }m ()>
  8; <CPU:  32.20, GPU: 4 x {1000}m ()>
+ 7; <CPU:   1.00, GPU: 1 x {1000}m ()>
  7; <CPU:   8.00, GPU: 1 x {230 }m ()>
  5; <CPU:   4.15, GPU: 1 x {810 }m ()>
- 5; <CPU:   1.00, GPU: 1 x {1000}m ()>
- 4; <CPU:  15.40, GPU: 1 x {1000}m ()>
  4; <CPU:  30.20, GPU: 2 x {1000}m ()>
  4; <CPU:  12.00, GPU: 1 x {460 }m ()>
+ 4; <CPU:   2.00, GPU: 1 x {1000}m ()>
  3; <CPU:   8.00, GPU: 1 x {650 }m ()>
  3; <CPU: 120.20, GPU: 8 x {1000}m ()>
- 3; <CPU:   2.00, GPU: 1 x {1000}m ()>
  3; <CPU:   4.00, GPU: 1 x {350 }m ()>
  3; <CPU:  64.00, GPU: 8 x {1000}m ()>
- 2; <CPU:   7.00, GPU: 1 x {1000}m ()>
+ 3; <CPU:  15.40, GPU: 1 x {1000}m ()>
  2; <CPU:  60.20, GPU: 4 x {1000}m ()>
  2; <CPU:   6.00, GPU: 1 x {1000}m ()>
  2; <CPU:   6.00, GPU: 1 x {320 }m ()>
  1; <CPU:  17.40, GPU: 2 x {1000}m ()>
  1; <CPU:  14.90, GPU: 1 x {1000}m ()>
+ 1; <CPU:   7.00, GPU: 1 x {1000}m ()>
  1; <CPU:   4.15, GPU: 1 x {270 }m ()>
  1; <CPU:  32.00, GPU: 4 x {1000}m ()>
  1; <CPU:   8.71, GPU: 1 x {1000}m ()>
@@ -60,4 +60,4 @@ log-cc_owmultigpu20_dr0.0_tn1.3_ts42_if1.0_mda23e.yaml-sc_FGDPredictor1000_desha
  1; <CPU:   9.40, GPU: 1 x {1000}m ()>
  1; <CPU: 120.00, GPU: 8 x {1000}m ()>
  1; <CPU:   4.00, GPU: 1 x {330 }m ()>
-Failed No.: 2080
+Failed No.: 2059

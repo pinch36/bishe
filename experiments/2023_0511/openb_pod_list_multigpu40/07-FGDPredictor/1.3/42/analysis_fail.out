@@ -1,9 +1,9 @@
 
 ===
 log-cc_owmultigpu40_dr0.0_tn1.3_ts42_if1.0_md46cb.yaml-sc_FGDPredictor1000_deshare_gsFGDPredictorScore_md6126.yaml.log
-263; <CPU:   3.15, GPU: 1 x {810 }m ()>
+260; <CPU:   3.15, GPU: 1 x {810 }m ()>
 183; <CPU:  11.30, GPU: 1 x {1000}m ()>
-123; <CPU:  11.40, GPU: 1 x {1000}m ()>
+122; <CPU:  11.40, GPU: 1 x {1000}m ()>
 104; <CPU:  11.91, GPU: 1 x {470 }m ()>
 92; <CPU:   3.15, GPU: 1 x {1000}m ()>
 88; <CPU:   8.00, GPU: 1 x {470 }m ()>
@@ -17,27 +17,27 @@ log-cc_owmultigpu40_dr0.0_tn1.3_ts42_if1.0_md46cb.yaml-sc_FGDPredictor1000_desha
 35; <CPU:  15.70, GPU: 1 x {1000}m ()>
 34; <CPU:  88.00, GPU: 8 x {1000}m ()>
 33; <CPU:   4.00, GPU: 1 x {1000}m ()>
-32; <CPU:  64.20, GPU: 8 x {1000}m ()>
-30; <CPU:  16.00, GPU: 1 x {1000}m ()>
-30; <CPU:   4.00, GPU: 1 x {230 }m ()>
+31; <CPU:   4.00, GPU: 1 x {230 }m ()>
+31; <CPU:  64.20, GPU: 8 x {1000}m ()>
+29; <CPU:  16.00, GPU: 1 x {1000}m ()>
 22; <CPU:  32.20, GPU: 4 x {1000}m ()>
 22; <CPU:  24.20, GPU: 1 x {1000}m ()>
 21; <CPU:   4.15, GPU: 1 x {550 }m ()>
 18; <CPU:   6.00, GPU: 1 x {460 }m ()>
 17; <CPU:   3.15, GPU: 1 x {590 }m ()>
 16; <CPU:  16.20, GPU: 2 x {1000}m ()>
-14; <CPU:  14.20, GPU: 1 x {1000}m ()>
+13; <CPU:  14.20, GPU: 1 x {1000}m ()>
 10; <CPU:   8.20, GPU: 1 x {1000}m ()>
 10; <CPU:  15.20, GPU: 1 x {1000}m ()>
 10; <CPU:   8.00, GPU: 1 x {320 }m ()>
  9; <CPU:  11.90, GPU: 1 x {1000}m ()>
- 9; <CPU:   4.00, GPU: 1 x {220 }m ()>
  8; <CPU:   6.00, GPU: 2 x {1000}m ()>
  8; <CPU:   4.15, GPU: 1 x {370 }m ()>
  8; <CPU:  17.40, GPU: 2 x {1000}m ()>
  8; <CPU:  32.00, GPU: 4 x {1000}m ()>
+ 7; <CPU:   4.00, GPU: 1 x {220 }m ()>
  6; <CPU:  60.20, GPU: 4 x {1000}m ()>
- 4; <CPU: 120.20, GPU: 8 x {1000}m ()>
+ 5; <CPU: 120.20, GPU: 8 x {1000}m ()>
  4; <CPU:   8.00, GPU: 1 x {650 }m ()>
  4; <CPU:  16.40, GPU: 1 x {1000}m ()>
  4; <CPU:  64.00, GPU: 8 x {1000}m ()>
@@ -61,4 +61,4 @@ log-cc_owmultigpu40_dr0.0_tn1.3_ts42_if1.0_md46cb.yaml-sc_FGDPredictor1000_desha
  1; <CPU:   8.00, GPU: 1 x {220 }m ()>
  1; <CPU: 120.00, GPU: 8 x {1000}m ()>
  1; <CPU:   8.00, GPU: 1 x {460 }m ()>
-Failed No.: 1665
+Failed No.: 1658
